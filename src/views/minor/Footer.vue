@@ -1,29 +1,44 @@
 <template>
-
-<footer class="page-footer font-small" style="backgroundColor: #3333ff;">
-        <div class="footer-copyright text-center py-3" style="color: white;">
-                © 2020 Copyright:
-                <a style="color: white;" href="https://colorado.edu">colorado.edu</a>
-        </div>
-</footer>
-
+    <footer class="text-center">
+        <p>
+            Thank you very much to
+            <a href="/doc/doc/acknowledgments/index.html" class="footer-link">
+                those who made Numberscope possible</a
+            >
+            over the years!
+        </p>
+        <p>
+            <i class="bi bi-github"></i>&nbsp;
+            <a class="footer-link" href="https://github.com/numberscope"
+                >GitHub</a
+            >
+            <span id="linkSpacer"></span>
+            <i class="bi bi-twitter"></i>&nbsp;
+            <a class="footer-link" href="https://twitter.com/numberscoper"
+                >Twitter</a
+            >
+        </p>
+    </footer>
 </template>
 
-<script>
-
-export default {
-    name: 'FooterComponent'
-}
-
-</script>
-
 <style>
-
-footer {
-        position: absolute;
-        bottom: 0;
+    footer {
+        color: var(--ns-information-foreground);
+        background-color: var(--ns-information-background);
+        height: var(--ns-footer-height);
+        padding-top: 10px;
         width: 100%;
-        height: 100px;
-}
-
+    }
+    footer p {
+        margin-bottom: 0.5rem;
+    }
+    .footer-link {
+        color: orange;
+    }
+    .footer-link:hover {
+        color: white;
+    }
+    #linkSpacer {
+        padding: 0 2em;
+    }
 </style>

@@ -1,13 +1,13 @@
-import Vue from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
-import UniqueId from 'vue-unique-id'
+import {alertMessage} from './shared/alertMessage'
 
+const app = createApp(App)
+app.config.errorHandler = e => {
+    window.alert(alertMessage(e))
+}
 
-Vue.config.productionTip = false
-Vue.use(UniqueId)
+app.use(router)
 
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app')
+app.mount('#app')
